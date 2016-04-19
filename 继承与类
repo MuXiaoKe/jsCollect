@@ -1,0 +1,132 @@
+var Class = function(){ //模拟类
+  var klass = function(){
+      this.init.apply(this,arguments);
+  };
+    klass.prototype.init = function(){};
+
+    klass.fn = klass.prototype;//别名
+
+    //定义类的别名
+    klass.fn.parent = klass;
+
+    //给类添加属性
+    klass.extend = function(obj){
+        var extended = obj.extended;
+        for(var i in obj){
+            klass[i]= obj[i];
+        }
+        if(extended){
+            extended(klass);
+        }
+    };
+    //给实例添加属性
+    klass.include = function(obj){
+        var included = obj.included;
+        for(var i in obj){
+            klass.fn[i]= obj[i];
+        }
+        if(included){
+            included(klass);
+        }
+    };
+
+    return klass;
+};
+
+var Person = new Class;
+
+Preson.prototype.init = function(){
+    //实例化初始化
+};
+
+Person.extend({
+    find: function(i){},
+    exists: function(i){}
+});
+//用法
+var person = new Person;
+
+var person = Person.find(1);
+
+//面向对象--寄生构造函数
+function SpecialArray(){
+    //创建数组
+    var values = new Array();
+
+    //添加值
+    values.push.apply(values,arguments);
+    //添加方法
+
+    values.toPipedString = function(){
+        return this.join("|");
+    };
+
+    return values;
+}
+
+
+//原型链
+function SuperType(){
+    this.preperty = ture;
+}
+SuperType.prototype.getSuperValue = function(){
+    return this.property;
+};
+function SubType(){
+    this.subproperty =false;
+}
+SubType.prototype = new SuperType();
+SubType.prototype.getSubValue = function(){
+    return this.subproperty;
+};
+var instance = new SubType();//instance 继承了2个原型的属性和方法；
+
+//原型式继承
+function object(o){
+    function F(){}
+    F.prototype = o;
+    return new F();
+}
+//寄生组合式继承
+function SuperType(name){
+    this.name = name;
+    this.colors = ["red","blue","green"];
+}
+SuperType.prototype.sayName = function(){
+    alert(this,name)
+};
+function SubType(name, age){
+    SuperType.call(this, name);
+
+    this.age = age;
+}
+SubType.prototype = new SuperType();
+
+SubType.prototype.sayAge = function(){
+    alert(this.age);
+}
+
+
+/**/
+function inheritPrototype(subType,superType){
+    var prototype = object(superType.prototype);//创建对象
+    prototype.constructor = subType;
+    subType.prototype = prototype;
+
+}
+//改进型
+function SuperType(name){
+    this.name = name;
+    this.colors = ["red","blue","green"];
+}
+SuperType.prototype.sayName = function(){
+    alert(this,name)
+};
+function SubType(name, age){
+    SuperType.call(this, name);
+    this.age = age;
+}
+inheritPrototype(SubType, SuperType);
+SubType.prototype.sayAge = function(){
+    alert(this.age);
+}
