@@ -163,3 +163,5 @@ btn.onmouseout = handler;
 
 //过滤html代码
 this.value = this.value.replace(/<[\/\!]*[^<>]*>/ig,"");
+
+JSON.stringify() 方法可以将任意的 JavaScript 值序列化成 JSON 字符串。
