@@ -164,4 +164,34 @@ btn.onmouseout = handler;
 //过滤html代码
 this.value = this.value.replace(/<[\/\!]*[^<>]*>/ig,"");
 
-JSON.stringify() 方法可以将任意的 JavaScript 值序列化成 JSON 字符串。
+//函数节流
+function throttle(fn, delay, atleast) {
+    var timeout = null,
+    startTime = new Date();
+    return function() {
+        var curTime = new Date();
+        clearTimeout(timeout);
+        if(curTime - startTime >= atleast) {
+            fn();
+            startTime = curTime;
+        }else {
+            timeout = setTimeout(fn, delay);
+        }
+    }
+}
+//判断元素在当前窗口是否可见
+function isElementInViewport (el) {
+    var rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+    );
+}
+
+
+// 把任何一个数保留成指定位数的浮点数
+function digitNumber(num, digit){
+   return Math.round( num * Math.pow( 10,digit ) ) / ( Math.pow( 10,digit ) );
+}
