@@ -1,0 +1,14 @@
+#与Date方法相关的使用经验或api
+1. new Date()里面的参数可以是负数；
+       
+       负数代表当前表示的日期减去负数值； 
+   new Date(2015,-5):
+     
+       就是以2015年1月1日为基准往前扣掉5个月
+2. 1.  getDate()  1~31;
+   2.  getDay()星期数 0~6;
+   3.  getMonth()   0~11;
+   4.  getFullYear() 四位数年份;
+   5.  getHours()     0~23;
+   6.  getMinutes()   0~59;
+   7.  getSeconds()   0~59;
