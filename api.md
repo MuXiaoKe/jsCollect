@@ -20,7 +20,7 @@ a.toLocaleString();//
 a.unshift();//向数组的开头添加一个或更多元素，并返回新的长度  
 a.valueOf();//返回原始值  
 
-
+## Math
 var m = Math;  
 
 m.abs(x);//返回数的绝对值  
@@ -31,11 +31,11 @@ m.min(x,y);//最低值
 m.random();//返回0～1之间的随机数  
 m.round(x);//把数四舍五入为最接近的整数  
 
-## Number;  
+## Number 
 
 tofixed(num)//可以吧数字四舍五入为指定小数位数的数字  
 
-
+## String
 var s = String;  
 s.charAt();//返回在指定位置的字符 从0开始计算  
 s.concat();//链接字符串str1.concat(str2)  
@@ -52,11 +52,8 @@ s.toUpperCase();//
 s.toLowerCase();//  
 
 
-//子节点
-st.children  
-//父节点
-st.parentNode  
-//元素在页面上最近定位的腹肌元素  
+ 
+//元素在页面上最近定位的父级元素  
 st.offsetParent    
 //第一个字元素  
 st.firstChild||st.firstElementChild  
@@ -79,7 +76,7 @@ currentStyle||getComputedStyle();
 
 contextmenu //上下文菜单事件  
 
-##查询窗口的视口尺寸  
+## 查询窗口的视口尺寸  
 window.innerWidth,window.innerHeight  
 //ie8级以下  
 document.documentElement.clientWidth,document.documentElement.clientHeight  
@@ -102,7 +99,7 @@ function getViewportSize(w){
     }
 }
 
-##查询窗口滚动条的位置  
+## 查询窗口滚动条的位置  
 window.pageXOffset,window.pageYOffset  
 //ie8及以下  
 document.documentElement.scrollLeft,document.documentElement.scrollTop  
@@ -125,7 +122,7 @@ function getScrollOffsets(w){
     }
 }
 
-##查询元素的几何位置
+## 查询元素的几何位置
 getBoundingClientRect()  //改方法返回元素在在视口坐标中的位置
 
 例如：
