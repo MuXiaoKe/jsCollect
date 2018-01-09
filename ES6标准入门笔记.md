@@ -33,3 +33,15 @@ ${}的大括号里面可以嵌套模板
 var name ="zh",time = "2018";
 `hello ${name} , how are you ${time}`
  ```
+
+ ## Number
+ isNaN(),isFinite(),parseInt(),parseFloat()现在都放在 Number对象下。
+
+
+ Number.isinteger() 判断一个值是否是整数  
+ Number.EPSILON   极小的常量 目的在于为浮点数计算设置一个误差范围
+ 例如：0.1+0.2 //0.30000000000000004
+
+ ## Math
+ Math.trunc()  用于去除一个数的小数部分，返回整数部分  
+ Math.sign()  判断一个数是正数 +1、负数 -1，还是零 0，-0 -0，其他 NaN。
