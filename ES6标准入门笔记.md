@@ -7,6 +7,28 @@ a // 1
 b // 2
 c // 3
 ```
+###扩展运算符
+其用处类似于把数组转为 所需要的参数
+```js
+console.log(...[1,2,3]) // 1 2 3
+
+function f(x, y, z){
+    //...
+}
+var args = [0, 1, 2];
+f(...args);
+```
+还可以把字符串转为真正的数组  
+` [...'hello']    // ['h','e','l','l','o'] `
+
+把dom选择器选出来的类数组转化为真正的数组
+```js
+var nodelist = document.querySelectorAll('div');
+var array = [...nodelist];
+```
+
+
+
 ## 对象
 
 let { bar , foo } = { foo: "aaa", bar: "bbb" }  
