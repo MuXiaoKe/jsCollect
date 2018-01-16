@@ -27,6 +27,10 @@ var nodelist = document.querySelectorAll('div');
 var array = [...nodelist];
 ```
 
+#### Array.from
+将类似数组的对象和可遍历对象转为真正的数组；  
+` Array.from({'0':1,'1':2,'2':3,length:3}) `
+对象必须得有length
 
 
 ## 对象
