@@ -30,9 +30,35 @@ var array = [...nodelist];
 #### Array.from
 将类似数组的对象和可遍历对象转为真正的数组；  
 ` Array.from({'0':1,'1':2,'2':3,length:3}) `
-对象必须得有length
+对象必须得有length;
+可用于dom对象；
 
+#### Array.of
+该方法用于将一组值转换为数组
+Array.of(1,2,3)  //[1,2,3]
 
+#### find() \ findIndex()
+一个是找到并返回第一个符合条件的数组成员；
+````js
+
+[1,2,3,-1].find((n)=> n<0 )  //-1
+
+````
+另一个是返回第一个符合条件的数组成员的位置。
+````js
+
+[1,2,3,-1].find(function(value, index ,arr){
+    return value >2
+} )  //2
+
+````
+
+####数组实例的fill()
+使用给定值填充一个数组
+````js
+['a', 'b', 'c'].fill(7)  // [7,7,7]
+new Array(3).fill(null) //  [null, null, null]
+````
 ## 对象
 
 let { bar , foo } = { foo: "aaa", bar: "bbb" }  
