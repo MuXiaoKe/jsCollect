@@ -53,12 +53,17 @@ Array.of(1,2,3)  //[1,2,3]
 
 ````
 
-####数组实例的fill()
+#### 数组实例的fill()
 使用给定值填充一个数组
 ````js
 ['a', 'b', 'c'].fill(7)  // [7,7,7]
 new Array(3).fill(null) //  [null, null, null]
 ````
+#### 数组实例的includes（）  
+返回一个布尔值，表示数组是否包含给定的值  
+[1,2,3].includes(2) // true  
+
+
 ## 对象
 
 let { bar , foo } = { foo: "aaa", bar: "bbb" }  
