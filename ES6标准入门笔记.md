@@ -69,6 +69,24 @@ new Array(3).fill(null) //  [null, null, null]
 let { bar , foo } = { foo: "aaa", bar: "bbb" }  
 作为对象时候，次序不一定要完全一致，只要属性名字相同即可。
 
+### Object.is()
+用来比较两个值是否完全相等  和===有一定的区别
+is()表示同值相等
+Object.is({},{}) // false
+Object.is(+0,-0) // false
+Object.is(NaN,NaN) // true
+
+
+### Object.assign()
+用于将源对象的所有可枚举属性复制到目标对象
+```js
+var target = { a:1, b :2 };
+var source1 = { b:3, c:4 };
+var source2 = { c:5, d:6 };
+Object.assign(target, source1, source2); //{ a:1 , b:3 , c:5 ,d:6 }
+```
+该方法是浅复制，如果源对象属性是对象，只会复制得到这个对象的引用
+
 ## 字符串
 
 const [a, b, c, d, e] = 'hello';  
