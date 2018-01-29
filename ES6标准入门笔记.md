@@ -120,3 +120,26 @@ var name ="zh",time = "2018";
  ## Math
  Math.trunc()  用于去除一个数的小数部分，返回整数部分  
  Math.sign()  判断一个数是正数 +1、负数 -1，还是零 0，-0 -0，其他 NaN。
+
+ ## Set 
+ 新的数据结构 。类似于数组 ，成员值都是唯一的，没有重复。
+ ```js
+ const s = new set();
+ [2,3,4,5,4,3].forEach(x=> s.add(x))  //Set(4) {2, 3, 4, 5}
+ ``` 
+
+
+ ## Map
+值值对应的集合，比 Object的“字符串-值”更完善。  可以在键上放对象。
+```js
+const m = new Map();
+const o = {p: 'hello world'};
+m.set(o,'content');
+m.get('o') //"conetnt"
+
+const map = new Map([
+    ['name','zhangsan'],
+    ['title','ahtor']
+])
+
+```
