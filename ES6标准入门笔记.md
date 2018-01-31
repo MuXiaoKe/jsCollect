@@ -143,3 +143,15 @@ const map = new Map([
 ])
 
 ```
+
+## Class
+extends 用来表示继承父类
+```js
+class B extends A {
+    constructor( ...args){
+        super(...args);
+    }
+}
+```
+
+super 在继承时是必须要的，可以用super.fangfa() 。 可以调用父类原型链上的方法。但是属性不能调用到。
