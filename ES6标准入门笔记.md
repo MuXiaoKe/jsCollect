@@ -154,4 +154,5 @@ class B extends A {
 }
 ```
 
-super 在继承时是必须要的，可以用super.fangfa() 。 可以调用父类原型链上的方法。但是属性不能调用到。
+super 在继承时是必须要的，可以用super.fangfa() 。
+ 可以调用父类原型链上的方法。但是属性不能调用到。
