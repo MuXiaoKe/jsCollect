@@ -194,9 +194,12 @@ function isElementInViewport (el) {
 }
 ```
 
-//  把任何一个数保留成指定位数的浮点数 
+###  把任何一个数保留成指定位数的浮点数 
 ```javascript 
 function digitNumber(num, digit){
    return Math.round( num * Math.pow( 10,digit ) ) / ( Math.pow( 10,digit ) );
 }
 ```
+
+### 可用于深拷贝
+JSON.parse(JSON.stringify(b))
