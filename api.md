@@ -98,7 +98,7 @@ function getViewportSize(w){
 ## 查询窗口滚动条的位置  
 window.pageXOffset,window.pageYOffset  
 // ie8及以下  
-```javascript
+```javascript   
 document.documentElement.scrollLeft,document.documentElement.scrollTop  
 
 function getScrollOffsets(w){
