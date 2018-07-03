@@ -10,3 +10,11 @@
 ```js
 $("body").css("position","relative")
 ```
+
+#IE浏览器的判断
+!window.addEventListener && 
+!!document.documentMode &&
+document.documentMode <9
+
+!window.addEventListener为ie11以下
+document.documentMode  文档模式 仅ie支持。他的数字为ie下的渲染版本 。 9就是ie9模式
