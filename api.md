@@ -227,3 +227,22 @@ function digitNumber(num, digit) {
 ### 可用于深拷贝
 
 JSON.parse(JSON.stringify(b))
+
+### 可用于获取 图片的原始宽度和高度
+
+```javascript
+function getNaturalSize(img) {
+	var naturalSize = {};
+	if (window.naturalWidth && window.naturalHeight) {
+		//ie9开始支持
+		naturalSize.width = img.width;
+		naturalSize.height = img.height;
+	} else {
+		var image = new Image();
+		image.src = img.src;
+		naturalSize.width = image.width;
+		naturalSize.height = image.height;
+	}
+	return naturalSize;
+}
+```
