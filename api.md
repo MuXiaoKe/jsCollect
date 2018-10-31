@@ -246,3 +246,16 @@ function getNaturalSize(img) {
 	return naturalSize;
 }
 ```
+
+### 删除数组中某个元素
+
+```javascript
+function removeByValue(arr, val) {
+	for (var i = 0; i < arr.length; i++) {
+		if (arr[i] == val) {
+			arr.splice(i, 1);
+			break;
+		}
+	}
+}
+```
