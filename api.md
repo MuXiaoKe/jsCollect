@@ -226,7 +226,7 @@ function digitNumber(num, digit) {
 
 ### 可用于深拷贝
 
-JSON.parse(JSON.stringify(b))
+JSON.parse(JSON.stringify(b)) 特殊情况除外：比如有 function 会被忽略。
 
 ### 可用于获取 图片的原始宽度和高度
 
