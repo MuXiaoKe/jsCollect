@@ -244,8 +244,8 @@ var imgLoad = function(url) {
 	}
 };
 /*实时预览上传图片*/
-var upPreviewImg = function() {
-	var _e = option.e,
+var upPreviewImg = function(options) {
+	var _e = options.e,
 		preload = null;
 	_e.onchange = function() {
 		var _v = this.value,
