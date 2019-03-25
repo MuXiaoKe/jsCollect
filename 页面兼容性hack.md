@@ -20,3 +20,5 @@ document.documentMode <9
 
 !window.addEventListener 为 ie11 以下
 document.documentMode 文档模式 仅 ie 支持。他的数字为 ie 下的渲染版本 。 9 就是 ie9 模式
+
+#安卓手机调用 input 会出现没有摄像头选项
