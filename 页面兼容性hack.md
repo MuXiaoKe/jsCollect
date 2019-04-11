@@ -22,3 +22,5 @@ document.documentMode <9
 document.documentMode 文档模式 仅 ie 支持。他的数字为 ie 下的渲染版本 。 9 就是 ie9 模式
 
 #安卓手机调用 input 会出现没有摄像头选项
+
+#ios 拍照的图片会有方向错误的问题，竖着拍的图差 90 度
