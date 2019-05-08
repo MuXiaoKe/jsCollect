@@ -60,5 +60,7 @@ function flatten(arr) {
 			res = res.concat(flatten(item));
 		} else {
 			res.push(item);
+		}
+	});
 	return res;
 }
